@@ -15,7 +15,8 @@ struct FavouritesCell: View {
     HStack {
       AsyncImage(url: URL(string: rowData.image)) { urlImage in
         urlImage.resizable()
-          .clipShape(Capsule())
+          .scaledToFill()
+          .cornerRadius(20)
       } placeholder: {
         ProgressView()
       }
